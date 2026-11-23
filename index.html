@@ -6,45 +6,85 @@
 <title>Buea Council E-Services</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#f4f6f8;color:#222}
-header{background:#0b6b3a;color:white;padding:25px 15px;text-align:center}
-header h1{font-size:26px}
-header p{margin-top:8px;opacity:.9}
-.hero{background:white;margin:15px;padding:20px;border-radius:12px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-.hero h2{color:#0b6b3a;margin-bottom:8px}
-.btn{display:inline-block;background:#0b6b3a;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;margin-top:12px;font-weight:bold}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 15px}
-.card{background:white;padding:18px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-.card h3{color:#0b6b3a;margin-bottom:6px;font-size:17px}
-.card p{font-size:14px;line-height:1.5}
-.card span{font-size:24px}
-footer{background:#111;color:white;text-align:center;padding:20px;margin-top:20px;font-size:13px;line-height:1.6}
-@media(max-width:500px){.grid{grid-template-columns:1fr}}
+body{background:#f4f6f0}
+header{background:linear-gradient(135deg,#007A33,#FFCC00);color:white;padding:40px 20px;text-align:center}
+header h1{font-size:32px}
+header p{margin-top:10px;font-size:16px}
+.topbar{background:#000;color:#FFCC00;text-align:center;padding:8px;font-size:13px}
+.container{max-width:900px;margin:auto;padding:20px}
+h2{color:#007A33;margin:25px 0 15px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.card{background:white;border-radius:12px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,0.08);border-top:5px solid #007A33}
+.card h3{color:#111}
+.card p{color:#555;margin:8px 0}
+.price{font-size:22px;font-weight:bold;color:#007A33}
+.days{background:#FFF3CD;display:inline-block;padding:5px 10px;border-radius:20px;font-size:13px;margin-top:5px}
+.card button{background:#007A33;color:white;border:none;padding:10px 18px;border-radius:8px;margin-top:12px;width:100%;font-weight:bold}
+.form-box{background:white;border-radius:12px;padding:25px;box-shadow:0 2px 10px rgba(0,0,0,0.08)}
+input,select,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:8px}
+.whatsapp-btn{background:#25D366;color:white;border:none;padding:15px;border-radius:10px;width:100%;font-size:17px;font-weight:bold}
+footer{background:#111;color:white;text-align:center;padding:20px;margin-top:30px}
 </style>
 </head>
 <body>
+<div class="topbar">BUEA COUNCIL • SOUTHWEST REGION • CAMEROON</div>
 <header>
-<h1>🏛️ Buea Council E-Services</h1>
-<p>By Eyong Benard Forester Achare - Buea</p>
-<p>Apply for Birth Certificate, Business Permit, Property Tax - From Your Phone</p>
+<h1>Welcome to Digital Buea</h1>
+<p>Buea Council E-Services — Apply for council services online. Fast, simple, secure.</p>
+<p>📍 Buea, at the foot of Mount Fako</p>
 </header>
-<div class="hero">
-<h2>Welcome to Digital Buea</h2>
-<p>No more long queues at the Council. Apply online, track your request, and get served faster.</p>
-<a class="btn" href="https://wa.me/237680000000?text=Hello%20Buea%20Council,%20I%20want%20to%20apply">Apply on WhatsApp</a>
-</div>
+
+<div class="container">
+<h2>Our Services, Prices & Processing Time</h2>
 <div class="grid">
-<div class="card"><span>📜</span><h3>Birth Certificate</h3><p>Apply for new birth certificate or replacement. Processing: 3-5 working days.</p></div>
-<div class="card"><span>🏪</span><h3>Business Permit</h3><p>Register your shop, business or market stall in Buea. Fast approval.</p></div>
-<div class="card"><span>🏠</span><h3>Property Tax</h3><p>Pay your property tax and get your receipt online. Secure &amp; simple.</p></div>
-<div class="card"><span>🧾</span><h3>Marriage Certificate</h3><p>Book and apply for marriage registration at Buea Council.</p></div>
-<div class="card"><span>🚧</span><h3>Report a Problem</h3><p>Bad road, no water, street light broken? Report it to the Council.</p></div>
-<div class="card"><span>📞</span><h3>Contact Council</h3><p>Buea Town, South West Region, Cameroon. Mon - Fri, 8am - 3:30pm.</p></div>
+<div class="card"><h3>📄 Birth Certificate</h3><p>Official birth certificate application & replacement.</p><div class="price">25,000 FCFA</div><span class="days">⏱ 1 Month</span><button onclick="selectService('Birth Certificate')">Apply Now</button></div>
+<div class="card"><h3>🏪 Business Permit</h3><p>Permit to legally run your business in Buea.</p><div class="price">50,000 FCFA</div><span class="days">⏱ 2 Months</span><button onclick="selectService('Business Permit')">Apply Now</button></div>
+<div class="card"><h3>💍 Marriage Certificate</h3><p>Marriage registration and certificate.</p><div class="price">35,000 FCFA</div><span class="days">⏱ 1 Month</span><button onclick="selectService('Marriage Certificate')">Apply Now</button></div>
+<div class="card"><h3>🏗️ Building Permit</h3><p>Approval to build in Buea municipality.</p><div class="price">100,000 FCFA</div><span class="days">⏱ 4 Months</span><button onclick="selectService('Building Permit')">Apply Now</button></div>
 </div>
+
+<h2>📝 Apply Now - Application Form</h2>
+<div class="form-box">
+<label>Your Full Name</label>
+<input id="name" placeholder="e.g. Eyong Bernard">
+<label>Your Phone / WhatsApp</label>
+<input id="phone" placeholder="e.g. 670880915">
+<label>Select Service</label>
+<select id="service">
+<option>Birth Certificate - 25,000 FCFA - 1 Month</option>
+<option>Business Permit - 50,000 FCFA - 2 Months</option>
+<option>Marriage Certificate - 35,000 FCFA - 1 Month</option>
+<option>Building Permit - 100,000 FCFA - 4 Months</option>
+</select>
+<label>Additional Message</label>
+<textarea id="msg" rows="3" placeholder="Any extra details..."></textarea>
+<button class="whatsapp-btn" onclick="sendWhatsApp()">Send Application on WhatsApp →</button>
+<p style="text-align:center;margin-top:10px;color:#666;font-size:13px">It will open WhatsApp to 670880915 with your details already typed.</p>
+</div>
+</div>
+
 <footer>
 <b>Buea Council E-Services</b><br>
-Built by Eyong Benard Forester Achare | Buea, Cameroon<br>
-© 2026 Buea Council - Digital Services Project
+By Eyong Bernard Forester Achare<br>
+WhatsApp: 670880915 | Buea, Cameroon
 </footer>
+
+<script>
+function selectService(s){
+  let sel=document.getElementById('service');
+  for(let i=0;i<sel.options.length;i++){ if(sel.options[i].text.includes(s)){sel.selectedIndex=i;}}
+  document.getElementById('service').scrollIntoView({behavior:'smooth'});
+}
+function sendWhatsApp(){
+  let name=document.getElementById('name').value;
+  let phone=document.getElementById('phone').value;
+  let service=document.getElementById('service').value;
+  let msg=document.getElementById('msg').value;
+  if(!name||!phone){alert('Please enter your name and phone number');return;}
+  let text="Hello Buea Council E-Services,%0A%0A*New Application*%0AName: "+name+"%0APhone: "+phone+"%0AService: "+service+"%0AMessage: "+msg;
+  window.open("https://wa.me/237670880915?text="+text,"_blank");
+}
+</script>
 </body>
 </html>
